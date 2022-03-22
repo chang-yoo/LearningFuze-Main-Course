@@ -1,0 +1,49 @@
+*{
+  font-family: 'Barlow', sans-serif;
+}
+
+body{
+  background-color: #F7F8FA;
+}
+
+.container{
+  width: 100%;
+  margin: auto;
+  height: 100vh;
+}
+
+.row{
+  display:flex;
+  width: 90%;
+  margin: auto;
+  height: 80%;
+}
+
+.screen{
+  width: 90%;
+  display: flex;
+  margin: auto;
+  padding: auto;
+  height: 100%;
+}
+
+.col-25{
+  flex-basis: 25%;
+  padding: auto;
+  margin: auto;
+  text-align: center;
+}
+
+.img-size{
+  width: 90%;
+  height: 400px;
+}
+
+.bottom-img{
+  width: 25%;
+  height: 70px;
+}
+
+p{
+  margin-top: 3rem;
+}

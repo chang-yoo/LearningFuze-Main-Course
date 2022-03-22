@@ -15,3 +15,7 @@ var bookshelf = [
     author: 'Phil Sturgeon & Laura Bohill'
   }
 ];
+
+console.log(bookshelf[1].author);
+console.log(bookshelf[0].isbn);
+console.log(bookshelf[2].title);

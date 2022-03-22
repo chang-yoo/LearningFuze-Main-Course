@@ -15,7 +15,7 @@ body{
   display: flex;
 }
 
-.row-1{
+.heading{
   display: flex;
   width: 80%;
   align-items: center;
@@ -24,7 +24,7 @@ body{
   margin-top: 1rem;
 }
 
-.row-1-image{
+.blue-logo{
   width: 100px;
   height: 80px;
 }
@@ -34,14 +34,14 @@ li{
   padding-left: 35px;
 }
 
-.row-1-list{
+.heading-list{
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.row-1-list a{
+.heading-list a{
   color: #B1B1B1;
 }
 
@@ -67,12 +67,12 @@ hr{
   width: 100%;
 }
 
-.row-2{
+.hero-image-col-100{
   width: 80%;
   margin: auto;
 }
 
-.row-2-image{
+.background-image{
   width: 100%;
   margin-top: 3rem;
   position: relative;
@@ -80,7 +80,7 @@ hr{
   filter: brightness(80%)
 }
 
-.row-2-text{
+.text-in-image{
   position: absolute;
 
   top: 200px;
@@ -89,19 +89,19 @@ hr{
   line-height: 25px;
 }
 
-.row-2-header{
+.header-image{
   width: 40%;
   line-height: 40px;
   font-family: "Tiempos Headline";
   font-weight: lighter;
 }
 
-.row-2-p{
+.p-image{
   width: 38.5%;
   font-size: 13px;
 }
 
-.row-2-bnt{
+.get-started-bnt{
   position:absolute;
   padding: 0.8rem 2.5rem;
   font-family: Avenir;
@@ -109,7 +109,7 @@ hr{
   margin-top: 15px;
 }
 
-.row-3{
+.prefer-canvs{
   width: 100%;
   height: 400px;
   background-color: #FAFAFA;
@@ -118,32 +118,32 @@ hr{
   border-bottom-style: solid;
 }
 
-.row-3-row-1{
+.breif-description{
   width: 35%;
   text-align: center;
   margin: auto;
 }
 
-.row-3-4-header{
+.grey-color-header{
   font-family: "Tiempos Headline";
   color: #6E6E6E;
   margin-top: 60px;
   font-weight: lighter;
 }
 
-.row-3-4-p{
+.light-grey-p{
   color: #7F7F7F;
   font-size: 13px;
   line-height: 20px;
 }
 
-.row-3-row-2{
+.location-template{
   width: 100%;
   text-align: center;
   margin: auto;
 }
 
-.row-3-list{
+.location{
   color: #7F7F7F;
   display: flex;
   width: 75%;
@@ -153,7 +153,7 @@ hr{
   font-size: 15px;
 }
 
-.row-4{
+.schedule-meeting{
   width: 85%;
   margin: 0 auto;
   display: flex;
@@ -161,25 +161,25 @@ hr{
   margin-bottom: 25px;
 }
 
-.row-4-col-1{
+.ready-to-learn{
   width: 50%;
   margin: auto;
   align-items: center;
 }
 
-.row-4-col-2{
+.link-to-schedule{
   width: 100%;
   text-align: end;
 }
 
-.row-4-bnt{
+.get-started-bnt-2{
   padding: 0.8rem 2.5rem;
   font-family: Avenir;
   font-size: 15px;
   margin-right: 30px;
 }
 
-.row-5{
+.dark-grey-background{
   width: 100%;
   background-color: #515351;
   color: white;
@@ -188,13 +188,13 @@ hr{
   align-items: center;
 }
 
-.row-5-col-1{
+.company-contact{
   width: 30%;
   align-items: center;
   padding-left: 8%;
 }
 
-.row-5-col-2{
+.company-info-link{
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -202,13 +202,13 @@ hr{
   line-height: 10px;
 }
 
-.row-5-image{
+.white-logo{
   width: 110px;
   height: 25px;
   margin-bottom: 25px;
 }
 
-.row-5-p{
+.contact-p{
   line-height: 20px;
   font-size: 12px;
 }
@@ -217,11 +217,11 @@ a{
   color: white;
 }
 
-.row-5-list{
+.company-info{
   margin-right: 90px;
 }
 
-.row-6{
+.footer{
   width: 100%;
   background-color: #FAFAFA;
   height: 80px;
@@ -229,14 +229,14 @@ a{
   margin: auto;
 }
 
-.row-6-nav{
+.footer-nav{
   display: flex;
   width: 300px;
   padding: auto;
   margin-left: 1.1rem;
 }
 
-.row-6-list{
+.footer-list{
   color: #8D8D8D;
   font-weight: bold;
   font-size: 12px;

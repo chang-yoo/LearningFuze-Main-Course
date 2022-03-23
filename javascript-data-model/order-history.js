@@ -7,11 +7,13 @@ var orderHistory = [
     delivered: 'Aug 8, 2020',
     handToResident: false,
     item: [
+      {
       title: 'JavaScript for impatient programmers',
       author: 'Rauschmayer, Dr. Axel',
       returnDate: 'Sep 7, 2020',
       price: 31.55,
       itemImage: 'images/url.png',
+      }
     ]
   },
   {
@@ -22,11 +24,13 @@ var orderHistory = [
     delivered: 'July 20, 2020',
     handToResident: true,
     item: [
+      {
       title: 'The Timeless Way of Building',
       author: 'Alexander, Chirstopher',
       returnDate: 'Aug 19, 2020',
       price: 41.33,
       itemImage: 'images/url2.png',
+      }
     ]
   },
   {
@@ -37,11 +41,13 @@ var orderHistory = [
     delivered: 'July 7, 2020',
     handToResident: true,
     item: [
+      {
       title: 'Gamecube Controller Adapter. Super Smash Bros Switch Gamecube Adapter for WII U, PC. Support Turbo and Vibration Features. No Driver and No Lag-Gamecube Adapter',
       author: null,
       returnDate: 'Aug 5, 2020',
       price: 15.98,
       itemImage: 'images/url3.png',
+      }
     ]
   },
   {
@@ -51,7 +57,8 @@ var orderHistory = [
     orderNumber: '113-2883177-2648248',
     delivered: 'July 5, 2020',
     handToResident: false,
-    item: [{
+    item: [
+      {
       title: 'GameCube Controller - Super Smash Bros. Edition (Nintendo Switch)',
       author: null,
       returnDate: 'Aug 4, 2020',
@@ -64,6 +71,7 @@ var orderHistory = [
         returnDate: 'Aug 4, 2020',
         price: 33.99,
         itemImage: 'images/url5.png',
-    }]
+    }
+  ]
   }
 ];

@@ -15,37 +15,44 @@ body{
   display: flex;
 }
 
-.width-80{
+.height {
+  width: 100%;
+  height: 200xp;
+  margin-top: -50px;
+}
+.row-width-80{
   width: 80%;
-}
-
-.column-to-left{
   margin: auto;
+  display: flex;
+  align-content: center;
+  align-items: baseline;
 }
 
-.column-to-right{
-
-}
 
 .blue-logo{
-  width: 100px;
-  height: 80px;
-}
-
-li{
-  padding: 1rem 0rem;
-  flex-basis: 20%;
+  margin: 0;
+  padding: 0;
+  width: 120px;
+  height: 100px;
+  padding-top: 5rem;
 }
 
 .heading-list{
-  margin: auto;
   display: flex;
+  align-content: center;
+  align-items: baseline;
   justify-content: space-evenly;
-  align-items: center;
+}
+
+.heading-list li{
+  width: 120px;
+  text-align: center;
+  font-size: 14px;
 }
 
 .heading-list a{
   color: #B1B1B1;
+  width: 100%;
 }
 
 li, a {
@@ -70,24 +77,20 @@ hr{
   width: 100%;
 }
 
-.hero-image-col-100{
-  width: 80%;
-  margin: auto;
-}
 
 .background-image{
   width: 100%;
   margin-top: 3rem;
   position: relative;
   height: auto;
-  filter: brightness(80%)
+  filter: brightness(80%);
 }
 
-.text-in-image{
+.col-full{
   position: absolute;
 
-  top: 200px;
-  left: 350px;
+  top: 250px;
+  left: 320px;
   color: white;
   line-height: 25px;
 }
@@ -112,7 +115,7 @@ hr{
   margin-top: 15px;
 }
 
-.prefer-canvs{
+.grey-container{
   width: 100%;
   height: 400px;
   background-color: #FAFAFA;
@@ -121,7 +124,7 @@ hr{
   border-bottom-style: solid;
 }
 
-.breif-description{
+.row-1-grey-container{
   width: 35%;
   text-align: center;
   margin: auto;
@@ -140,37 +143,37 @@ hr{
   line-height: 20px;
 }
 
-.location-template{
-  width: 100%;
+.row-2-grey-container{
+  width: 75%;
   text-align: center;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
 }
 
-.location{
+.col-of-location{
+  width: 100%;
+  padding-right: 2.5rem;
+
+}
+
+.col-2-location{
+  margin: 1 rem auto;
   color: #7F7F7F;
-  display: flex;
-  width: 75%;
-  margin: 2rem 6.2rem;
-  flex-wrap: wrap;
-  justify-content: space-around;
+}
+
+
+.col-2-location li{
+  margin: 2rem 0rem;
   font-size: 15px;
 }
 
-.schedule-meeting{
-  width: 85%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  margin-bottom: 25px;
+.col-1-width-80{
+  flex-basis: 100%;
+  padding-bottom: 25px;
 }
 
-.ready-to-learn{
-  width: 50%;
-  margin: auto;
-  align-items: center;
-}
-
-.link-to-schedule{
+.col-2-width-80{
   width: 100%;
   text-align: end;
 }
@@ -188,27 +191,20 @@ hr{
   color: white;
   height: 350px;
   display: flex;
-  align-items: center;
+  align-content: center;
 }
 
-.company-contact{
-  width: 30%;
-  align-items: center;
-  padding-left: 8%;
-}
-
-.company-info-link{
+.col-2-dark-grey-background{
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-  margin-right: 200px;
-  line-height: 10px;
+  align-content: center;
+  align-items: baseline;
+  margin-left: 230px;
 }
 
 .white-logo{
   width: 110px;
   height: 25px;
-  margin-bottom: 25px;
 }
 
 .contact-p{
@@ -216,31 +212,47 @@ hr{
   font-size: 12px;
 }
 
-a{
+.col-first-half-dark-grey-background{
+  margin-left: 50px;
+}
+
+.col-second-half-dark-grey-background{
+  margin-left: 100px;
+}
+
+.col-half-dark-grey-background{
+  width: 100%;
+
+}
+
+.col-half-dark-grey-background a{
   color: white;
 }
 
-.company-info{
-  margin-right: 90px;
+.col-half-dark-grey-background li{
+  margin: 1rem auto;
 }
 
-.footer{
+.light-grey-background{
   width: 100%;
   background-color: #FAFAFA;
   height: 80px;
-  display: flex;
-  margin: auto;
 }
 
 .footer-nav{
   display: flex;
-  width: 300px;
-  padding: auto;
-  margin-left: 1.1rem;
+  width: 100%;
+  justify-content: start;
+  padding: 0;
 }
 
 .footer-list{
   color: #8D8D8D;
   font-weight: bold;
   font-size: 12px;
+}
+
+.footer-nav li{
+  margin-right: 15px;
+  margin-top: 15px;
 }

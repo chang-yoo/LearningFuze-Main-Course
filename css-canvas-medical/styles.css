@@ -123,7 +123,7 @@ hr{
   border-bottom-style: solid;
 }
 
-.row-1-grey-container{
+.clinicians{
   width: 35%;
   text-align: center;
   margin: auto;
@@ -142,7 +142,7 @@ hr{
   line-height: 20px;
 }
 
-.row-2-grey-container{
+.address-grey-container{
   width: 75%;
   text-align: center;
   margin: auto;
@@ -150,19 +150,19 @@ hr{
   justify-content: space-between;
 }
 
-.col-of-location{
+.address{
   width: 100%;
   padding-right: 2.5rem;
 
 }
 
-.col-2-location{
+.address-list{
   margin: 1 rem auto;
   color: #7F7F7F;
 }
 
 
-.col-2-location li{
+.address-list li{
   margin: 2rem 0rem;
   font-size: 15px;
 }
@@ -193,7 +193,7 @@ hr{
   align-content: center;
 }
 
-.col-2-dark-grey-background{
+.company-information{
   width: 100%;
   display: flex;
   align-content: center;
@@ -211,24 +211,24 @@ hr{
   font-size: 12px;
 }
 
-.col-first-half-dark-grey-background{
+.company-list{
   margin-left: 50px;
 }
 
-.col-second-half-dark-grey-background{
+.company-link{
   margin-left: 100px;
 }
 
-.col-half-dark-grey-background{
+.direct-link{
   width: 100%;
 
 }
 
-.col-half-dark-grey-background a{
+.direct-link a{
   color: white;
 }
 
-.col-half-dark-grey-background li{
+.direct-link li{
   margin: 1rem auto;
 }
 

@@ -4,3 +4,4 @@ function getSecondElement(array){
   return secondElement;
 }
 var getSecondElementResult = getSecondElement([4,3,2,1]);
+console.log('second element: ', getSecondElementResult)

@@ -5,3 +5,4 @@ function getCharacterAtIndex(string, index){
 }
 
 var getCharacterAtIndexResult = getCharacterAtIndex('he who shall not be named', 17);
+console.log('character at index: ', getCharacterAtIndexResult)

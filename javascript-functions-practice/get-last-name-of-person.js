@@ -1,8 +1,13 @@
 /* exported getLastNameOfPerson */
 function getLastNameOfPerson(person){
-  var nameOfPerson = {firstName:'Lea', lastName:'Verou'}
   var lastNameOfPerson = person.lastName;
   return lastNameOfPerson;
 }
 
-var getLastNameOfPersonResult = getLastNameOfPerson();
+var joe = {
+  lastName: 'Yoo'
+}
+
+var getLastNameOfPersonResult = getLastNameOfPerson(joe);
+
+console.log('last name of person: ', getLastNameOfPersonResult);

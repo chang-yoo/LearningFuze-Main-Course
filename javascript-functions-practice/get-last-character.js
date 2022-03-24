@@ -6,3 +6,4 @@ function getLastCharacter(string){
 }
 
 var getLastCharacterResult = getLastCharacter('he who shall not be named');
+console.log('get last character: ', getLastCharacterResult)

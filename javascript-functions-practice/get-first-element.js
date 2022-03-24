@@ -5,3 +5,4 @@ function getFirstElement(array){
 }
 
 var getFirstElementResult = getFirstElement([4,3,2,1]);
+console.log('first element: ', getFirstElementResult);

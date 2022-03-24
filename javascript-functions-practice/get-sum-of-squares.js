@@ -5,3 +5,4 @@ function getSumOfSquares(x,y){
 }
 
 var getSumOfSquaresResult = getSumOfSquares(4,5);
+console.log('sum of square: ', getSumOfSquaresResult)

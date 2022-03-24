@@ -5,3 +5,4 @@ function getLengthOfString(string){
 }
 
 var getLengthOfStringResult = getLengthOfString('he who shall not be named');
+console.log('length of string: ', getLengthOfStringResult)

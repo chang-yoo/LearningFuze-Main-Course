@@ -5,3 +5,4 @@ function getFirstCharacter(string){
 }
 
 var getFirstCharacterResult = getFirstCharacter('he who shall not be named');
+console.log('get first character: ', getFirstCharacterResult);

@@ -5,3 +5,5 @@ function getLastElement(array){
   return lastElement;
 }
 var getLastElementResult = getLastElement(['i', 'tell', 'you', 'what']);
+
+console.log('last element: ', getLastElementResult);

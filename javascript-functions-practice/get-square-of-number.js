@@ -4,4 +4,5 @@ function getSquareOfNumber(number){
   return squareOfNumber;
 }
 
-var getSquareOfNumberResult = getSquareOfNumber(1);
+var getSquareOfNumberResult = getSquareOfNumber(3);
+console.log('square of number: ', getSquareOfNumberResult);

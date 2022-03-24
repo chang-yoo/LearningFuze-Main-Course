@@ -5,3 +5,4 @@ function getRightTriangleArea(base, height){
 }
 
 var getRightTriangleAreaResult = getRightTriangleArea(3,4);
+console.log('right triangle area: ', getRightTriangleAreaResult);

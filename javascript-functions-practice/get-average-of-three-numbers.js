@@ -5,4 +5,4 @@ function getAverageOfThreeNumbers(x,y,z){
 }
 
 var getAverageOfThreeNumbersResult = getAverageOfThreeNumbers(2,4,6);
-  getAverageOfThreeNumbersResult()
+console.log('average of three numbers: ', getAverageOfThreeNumbersResult);

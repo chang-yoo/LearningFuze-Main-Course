@@ -5,4 +5,4 @@ function getAverageOfTwoNumbers(x,y){
 }
 
 var getAverageOfTwoNumbersResult = getAverageOfTwoNumbers(2,4);
-getAverageOfTwoNumbersResult();
+console.log('average of two numbers: ',getAverageOfTwoNumbersResult);

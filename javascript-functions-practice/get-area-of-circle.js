@@ -5,3 +5,4 @@ function getAreaOfCircle(radius){
 }
 
 var getAreaOfCircleResult = getAreaOfCircle(4.982787485166879);
+console.log('area of circle: ', getAreaOfCircleResult);

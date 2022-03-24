@@ -5,3 +5,4 @@ function getSecondCharacter(string){
 }
 
 var getSecondCharacterResult = getSecondCharacter('he who shall not be named');
+console.log('second character: ', getSecondCharacterResult)

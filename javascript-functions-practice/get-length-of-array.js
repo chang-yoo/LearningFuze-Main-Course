@@ -5,3 +5,4 @@ function getLengthOfArray(array){
 }
 
 var getLengthOfArrayResult = getLengthOfArray(['i', 'tell', 'you', 'what']);
+console.log('length of array: ', getLengthOfArrayResult);

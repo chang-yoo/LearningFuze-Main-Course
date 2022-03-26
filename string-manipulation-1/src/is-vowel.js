@@ -17,5 +17,5 @@ function isVowel(character){
   }
   return false;
 }
-var isVowelResult = isVowel('e')
-console.log(isVowelResult)
+
+console.log('vowel: ', isVowel('E'))

@@ -1,10 +1,10 @@
 /* exported isUpperCased */
 
 /*
-create a function with a for loop with an initialization, a condition, and a final expression.
-create a variable to check if the string is uppercased
-creat if statement to return true if string is uppercased, else return false
-
+creat a function with a loop with a if statement inside to check if all index is uppercased
+define a variable to make all letters uppercase
+create a if statement to check if output is uppercase with the variable defined
+return true if so, return false if not
 */
 
 function isUpperCased(word){
@@ -15,6 +15,4 @@ function isUpperCased(word){
   }
 }
 
-var LearningFuze = 'LearningFuze';
-var isUpperCasedResult = isUpperCased(LearningFuze)
-console.log('is LearningFuze upper cased: ', isUpperCasedResult)
+console.log('is LearningFuze upper cased: ', isUpperCased('LearningFuze'))

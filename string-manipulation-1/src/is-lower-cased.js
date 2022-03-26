@@ -1,9 +1,9 @@
 /* exported isLowerCased */
 
 /*
-creat a function with a loop with a if statement insdie
-create a value to cehck if output is lowercase
-compare the value with using ===
+creat a function with a loop with a if statement inside to check if all index is lowercased
+define a variable to make all letters lowercase
+create a if statement to check if output is lowercase with the variable defined
 return true if so, return false if not
 */
 
@@ -15,6 +15,4 @@ function isLowerCased(word){
   }
 }
 
-var LearningFuze = 'LearningFuze';
-var isLowerCasedResult = isLowerCased(LearningFuze);
-console.log('is LearningFuze lowercase: ', isLowerCasedResult)
+console.log('is LearningFuze lowercase: ', isLowerCased('LearningFuze'))

@@ -1,10 +1,9 @@
 /* exported getFirstChar */
 
 /* pseudo code
-create a for loop within the function.
-create an empty string for output
-find the initialization, condition, and final expression for the loop.
-return the fist index [0] of the string to the output.
+create a for loop within the function to loop the index of an arugment.
+set the initialization, condition, and final expression for the loop.
+return the fist index[0]
 */
 
 function getFirstChar(string){
@@ -13,6 +12,4 @@ function getFirstChar(string){
   }
 }
 
-var LearningFuze = 'LearningFuze';
-var getFirstCharResult = getFirstChar(LearningFuze);
-console.log('first char: ', getFirstCharResult);
+console.log('first char: ', getFirstChar('LearningFuze'));

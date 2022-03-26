@@ -121,7 +121,13 @@ hr{
   margin-top: 3rem;
   border-bottom-color: #E2E4E9;
   border-bottom-style: solid;
+  position: inherit;
+  top: inherit;
+  left: inherit;
+  line-height: inherit;
+  color: inherit;
 }
+
 
 .clinicians{
   width: 35%;
@@ -167,12 +173,12 @@ hr{
   font-size: 15px;
 }
 
-.col-1-width-80{
+.padding-bottom-25{
   flex-basis: 100%;
   padding-bottom: 25px;
 }
 
-.col-2-width-80{
+.button-at-the-end{
   width: 100%;
   text-align: end;
 }
@@ -187,10 +193,13 @@ hr{
 .dark-grey-background{
   width: 100%;
   background-color: #515351;
-  color: white;
   height: 350px;
   display: flex;
   align-content: center;
+  position: inherit;
+  top: inherit;
+  left: inherit;
+  line-height: inherit;
 }
 
 .company-information{

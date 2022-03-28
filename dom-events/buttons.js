@@ -11,7 +11,7 @@ $clickButton.addEventListener('click', handleClick);
 function handleMouseOver(event){
   console.log('button hovered')
   console.log('event', event)
-  console.log('event.tareget', event.taget)
+  console.log('event.tareget', event.target)
 }
 
 var $handleMouseOver = document.querySelector('.hover-button')

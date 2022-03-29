@@ -87,7 +87,6 @@ hr{
 
 .absolute-position{
   position: absolute;
-
   top: 250px;
   left: 320px;
   color: white;
@@ -121,11 +120,6 @@ hr{
   margin-top: 3rem;
   border-bottom-color: #E2E4E9;
   border-bottom-style: solid;
-  position: inherit;
-  top: inherit;
-  left: inherit;
-  line-height: inherit;
-  color: inherit;
 }
 
 
@@ -195,11 +189,7 @@ hr{
   background-color: #515351;
   height: 350px;
   display: flex;
-  align-content: center;
-  position: inherit;
-  top: inherit;
-  left: inherit;
-  line-height: inherit;
+  color: white;
 }
 
 .col-100-displayflex-company-information{

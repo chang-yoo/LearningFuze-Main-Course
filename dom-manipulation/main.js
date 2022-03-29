@@ -6,21 +6,22 @@ var $clickCount = document.querySelector('.click-count');
 
 function temperature() {
   if (click < 4) {
-    return 'hot-button.cold'
+    return 'cold'
   } else if (click < 7) {
-    return 'hot-button.cool'
+    return 'cool'
   } else if (click < 10) {
-    return 'hot-button.tepid'
+    return 'tepid'
   } else if (click < 13) {
-    return 'hot-button.warm'
+    return 'warm'
   } else if (click < 16) {
-    return 'hot-button.hot'
+    return 'hot'
   } else {
-    return 'hot-button.nuclear'
+    return 'nuclear'
   }
 };
 
 $hotButton.addEventListener('click', function(){
   click++;
   $clickCount.textContent = 'Clicks: ' + click;
+  $hotButton.className = 'hot-button ' + temperature()
 });

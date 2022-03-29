@@ -11,10 +11,9 @@ return the value
 
 function getWords(string){
   var output = [];
-    if (string === '') {
-      return output;
-    }
-    else {
+  if (string === '') {
+    return output;
+  } else {
     return string.split(' ')
     }
   }

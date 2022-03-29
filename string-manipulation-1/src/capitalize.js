@@ -1,23 +1,21 @@
 /* exported capitalize */
 
 /*
-create a function with the for loop inside in order to loop the index of argument.
-use if statement to make 0 index capitalized
-set else to make lowercase to the rest index
-return output
+create a function def.
+assign empty string to a variable ('')
+assign first index number to a variable (firstLetter)
+assign a variable with an uppercase method (upperCase)
+assign the rest words to a variable (restWords)
+assign a variable with a lowercase method (lowerCase)
 */
+
 
 function capitalize(word){
   var output = '';
-
-  for (var i = 0; i < word.length; i++){
-    if (i === 0) {
-      output = word[i].toUpperCase();
-    } else {
-      output += word[i].toLowerCase();
-    }
-  }
+  var firstLetter = word[0]
+  var upperCase = firstLetter.toUpperCase();
+  var restWords = word.slice(1);
+  var lowerCase = restWords.toLowerCase();
+  output = upperCase + lowerCase;
   return output;
 }
-
-console.log('capitalized: ', capitalize('hookshot'));

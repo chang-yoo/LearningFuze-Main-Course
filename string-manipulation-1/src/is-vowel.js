@@ -12,7 +12,7 @@ function isVowel(character){
   var vowel = ['A', 'E', 'U', 'O', 'I'];
     for (var i = 0; i < vowel.length; i ++){
       if (character.toLowerCase() === vowel[i].toLowerCase()){
-      return true;
+        return true;
     }
   }
   return false;

@@ -9,11 +9,13 @@ return output
 */
 
 function reverseWord(word){
-  var output = '';
-  for (var i = word.length-1; i >= 0; i--){
-  output += word[i];
+    var output = '';
+
+    for (var i = word.length-1; i >= 0; i--){
+      output += word[i];
+    }
+
+    return output;
   }
-  return output;
-}
 
 console.log('reverse word: ', reverseWord('foo'))

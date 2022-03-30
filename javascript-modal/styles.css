@@ -12,18 +12,11 @@ body{
   width: 100%;
   height: 100vh;
   position: absolute;
-  z-index: 4;
+  z-index: 2;
 }
 
-.row{
+.layout{
   display: flex;
-}
-
-.background-color{
-  background-color: rgba(32, 32, 32, 0.86);
-}
-
-.position{
   justify-content: center;
   position: relative;
 }
@@ -43,6 +36,12 @@ body{
   z-index: 1;
 }
 
+.background-color{
+  background-color: rgba(32, 32, 32, 0.86);
+  position: relative;
+  z-index: 2;
+}
+
 .pointer-none{
   pointer-events: none;
 }
@@ -53,6 +52,7 @@ body{
 
 .fixed{
   position: fixed;
+  z-index: 3;
   text-align: center;
   width: 30%;
   height: 200px;

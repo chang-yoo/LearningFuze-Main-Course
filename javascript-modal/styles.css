@@ -44,12 +44,8 @@ body{
 
 .background-color{
   background-color: rgba(32, 32, 32, 0.86);
-}
-
-.pointer-none{
-  pointer-events: none;
-  z-index: -1;
-  position: relative;
+  position: absolute;
+  top: 0;
 }
 
 .none{

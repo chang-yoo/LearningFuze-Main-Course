@@ -1,16 +1,17 @@
-var $name = document.forms[0].name;
-var $email = document.forms[0].email;
-var $message = document.forms[0].message;
+var contactForm = document.querySelector('#contact-form')
 
-function prevent(event) {
+function handleSubmit(event){
   event.preventDefault();
-};
+  var valueName = contactForm.elements.name.value;
+  var valueEmail = contactForm.elements.email.vaue;
+  var valueMessage = contactForm.elements.message.value;
+  var messageData = {
+    name: valueName,
+    email: valueEmail,
+    message: valueMessage,
+  }
+  console.log(messageData);
+  contactForm.reset()
+}
 
-$name.addEventListener('submit', prevent);
-
-$email.addEventListener('submit', prevent);
-
-$message.addEventListener('submit', prevent);
-
-var messageData = {name: $name.value, email: $email.value, message: $message.value}
-console.log(messageData);
+contactForm.addEventListener('submit', handleSubmit);

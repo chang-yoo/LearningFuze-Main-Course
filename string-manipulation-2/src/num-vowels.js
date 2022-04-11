@@ -1,10 +1,7 @@
 /* exported numVowels */
 /*
 function definition
-assign lowercased parameter to variable
-assign 0 to variable
-use for loop and if to fnd if vowels in an argumenit
-if true increment varible with the value of 0
+set the all charcters of string uppercased or lowercased to compare to each vowels
 */
 
 function numVowels(string){

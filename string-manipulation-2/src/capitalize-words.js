@@ -1,4 +1,12 @@
 /* exported capitalizeWords */
+/*
+function definition
+split them into separate words
+make first character of each separated words caiptalized
+remove the first character and make the rest lowercased
+add them together and convert back to string
+*/
+
 function capitalizeWords(string){
   var output = [];
   var arr = string.split(' ')

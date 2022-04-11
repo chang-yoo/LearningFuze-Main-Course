@@ -1,6 +1,8 @@
 /* exported firstChars */
 /* function definition
-slice method with length as index
+function definition
+*return from first characters to the length*
+so keep the characters from index 0 to the length and remove the rest
 */
 function firstChars(length, string){
   var str = string.slice(0, length);

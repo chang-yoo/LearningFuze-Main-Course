@@ -1,6 +1,7 @@
 /* exported truncate */
 /*
- create a function and use splice metho and add ...
+ function definition
+ find where to take out the letters and add ...
  */
 
 function truncate (length, string){

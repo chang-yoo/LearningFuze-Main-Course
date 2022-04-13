@@ -26,6 +26,8 @@ Account.prototype.withdraw = function (amount){
 }
 
 Account.prototype.getBalance = function (){
+  //separate the deposits and withdraws
+  //get the total numbers of them and subtract
   var deposits = [];
   var withdraws = [];
     for (var i = 0; i < this.transactions.length; i++){
@@ -39,11 +41,11 @@ Account.prototype.getBalance = function (){
     }
   var totalDeposit = 0;
   for (var i = 0; i < deposits.length; i++){
-    totalDeposit += deposits[i].amount;
+    totalDeposit += deposits[i].amount
   }
   var totalWithdraw = 0;
   for (var i = 0; i < withdraws.length; i++){
-    totalWithdraw += withdraws[i].amount;
+    totalWithdraw += withdraws[i].amount
   }
   var balance = totalDeposit - totalWithdraw;
   return balance;

@@ -1,0 +1,44 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.row{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.correct{
+  color: #1ACD1B;
+}
+
+.incorrect{
+  color: red;
+}
+
+span{
+  white-space: pre;
+  margin: auto;
+  padding: auto;
+}
+
+
+.underline{
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+}
+
+.underline-red{
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: red;
+}

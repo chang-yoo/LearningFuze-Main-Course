@@ -10,12 +10,14 @@
 function getNumbersToTen(){
   var numbers = [];
   var currentNumber = 1;
+  while (currentNumber<=10){
   while (currentNumber <= 10){
     numbers.push(currentNumber);
     currentNumber++;
   }
   return numbers;
 }
+console.log(getNumbersToTen())
 
 console.log('numbers to ten: ', getNumbersToTen());
 

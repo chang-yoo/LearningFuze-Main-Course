@@ -1,3 +1,18 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  font-family: Avenir;
+}
+
+.container{
+  width: 90%;
+  margin: auto;
+  padding: auto;
+
 body{
   margin: 0;
   padding: 0;
@@ -14,6 +29,52 @@ body{
 .row{
   display: flex;
 }
+
+.top-space-remove{
+  height: 50px;
+}
+
+.col-80{
+  width: 80%;
+  margin: auto;
+}
+
+.first-row-space-between{
+  display: flex;
+  align-content: center;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.blue-logo{
+  margin: 0;
+  padding: 0;
+  width: 120px;
+  height: 100px;
+}
+
+.col-100{
+  width: 100%;
+}
+
+.col-40{
+  width: 40%;
+}
+
+.heading-list{
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
+.heading-list li{
+  width: 120px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.button-at-row-1{
+  margin: auto 0;
 
 .width-80{
   width: 80%;
@@ -69,6 +130,21 @@ button{
 hr{
   border-top:#B1B1B1;
   width: 100%;
+  margin-top: 40px;
+}
+
+.background-image{
+  margin-top: 3rem;
+  position: relative;
+  height: auto;
+  filter: brightness(80%);
+}
+
+.absolute-position{
+  position: absolute;
+  top: 250px;
+  left: 320px;
+
 }
 
 .hero-image-col-100{
@@ -89,20 +165,26 @@ hr{
 
   top: 200px;
   left: 350px;
+
   color: white;
   line-height: 25px;
 }
 
 .header-image{
+
+
   width: 40%;
+
   line-height: 40px;
   font-family: "Tiempos Headline";
   font-weight: lighter;
 }
 
 .p-image{
+  font-size: 0.87rem;
   width: 38.5%;
   font-size: 13px;
+
 }
 
 .get-started-bnt{
@@ -113,14 +195,24 @@ hr{
   margin-top: 15px;
 }
 
+
+.grey-container{
+  height: 500px;
+  
 .prefer-canvs{
   width: 100%;
   height: 400px;
+
   background-color: #FAFAFA;
   margin-top: 3rem;
   border-bottom-color: #E2E4E9;
   border-bottom-style: solid;
 }
+
+.text-aglin-center-margin-auto{
+  text-align: center;
+  margin: auto;
+  padding-top:30px
 
 .breif-description{
   width: 35%;
@@ -137,6 +229,47 @@ hr{
 
 .light-grey-p{
   color: #7F7F7F;
+  font-size: 1.1rem;
+  line-height: 30px;
+}
+
+.col-75{
+  width: 75%;
+}
+
+.text-center-margin-auto-display-flex{
+  text-align: center;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.padding-left-3rem{
+  margin-left: 3rem
+}
+
+.padding-right-7rem{
+  margin-right: 7rem;
+}
+
+.margin-1-auto-color-grey{
+  margin: 1 rem auto;
+  color: #7F7F7F;
+}
+
+.margin-1-auto-color-grey li{
+  margin: 2rem 0rem;
+  font-size: 15px;
+}
+
+.padding-bottom-25{
+  padding-bottom: 25px;
+}
+
+
+.text-baseline{
+  align-items: baseline;
+  justify-content: space-between;
   font-size: 13px;
   line-height: 20px;
 }
@@ -180,6 +313,88 @@ hr{
   padding: 0.8rem 2.5rem;
   font-family: Avenir;
   font-size: 15px;
+  right: 0px;
+}
+
+.to-the-right{
+  display: flex;
+  justify-content: flex-end;
+}
+.dark-grey-background{
+  background-color: #515351;
+  height: 350px;
+  display: flex;
+  color: white;
+  width: 100%
+}
+
+.white-logo{
+  width: 130px;
+  height: 30px;
+}
+
+.contact-p{
+  line-height: 20px;
+  font-size: 12px;
+  margin-top: 2rem;
+}
+
+.col-one-third{
+  flex-basis: calc(100%/3);
+}
+
+.col-two-thirds{
+  flex-basis: calc(200%/3);
+  display: flex
+}
+
+.vertical-align{
+  margin: auto 0;
+  padding: auto 0;
+}
+
+.margin-left{
+  margin-left: 150px;
+}
+
+.col-100 a{
+  color: white;
+}
+
+
+.heading-list a{
+  color: #B1B1B1;
+}
+
+.col-100 li{
+  margin: 1.5rem auto;
+}
+
+.light-grey-background{
+  background-color: #FAFAFA;
+  height: 120px;
+  display: flex;
+  width: 100%;
+}
+
+.footer{
+  margin-left: 6%
+}
+
+.footer-link{
+  padding: 0 1rem;
+}
+
+.footer-link a{
+  color: #6E6E6E;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.column-half{
+  flex-basis: 50%;
+}
+  
   margin-right: 30px;
 }
 

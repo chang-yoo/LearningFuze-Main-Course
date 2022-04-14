@@ -133,6 +133,7 @@ hr{
 .text-aglin-center-margin-auto{
   text-align: center;
   margin: auto;
+  padding-top:30px
 }
 
 .grey-color-header{
@@ -159,9 +160,12 @@ hr{
   justify-content: space-between;
 }
 
-.padding-right-2.5ress{
-  padding-right: 2.5rem;
+.padding-left-3rem{
+  margin-left: 3rem
+}
 
+.padding-right-7rem{
+  margin-right: 7rem;
 }
 
 .margin-1-auto-color-grey{
@@ -200,6 +204,7 @@ hr{
   height: 350px;
   display: flex;
   color: white;
+  width: 100%
 }
 
 .white-logo{
@@ -219,6 +224,7 @@ hr{
 
 .col-two-thirds{
   flex-basis: calc(200%/3);
+  display: flex
 }
 
 .vertical-align{
@@ -246,6 +252,8 @@ hr{
 .light-grey-background{
   background-color: #FAFAFA;
   height: 120px;
+  display: flex;
+  width: 100%;
 }
 
 .footer{
@@ -260,4 +268,8 @@ hr{
   color: #6E6E6E;
   font-weight: bold;
   font-size: 12px;
+}
+
+.column-half{
+  flex-basis: 50%;
 }

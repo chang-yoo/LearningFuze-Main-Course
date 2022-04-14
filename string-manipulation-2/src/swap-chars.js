@@ -13,6 +13,5 @@ function swapChars(firstIndex, secondIndex, string){
   var arr = string.split('');
   arr[firstIndex] = y;
   arr[secondIndex] = x;
-
   return arr.join('');
 }

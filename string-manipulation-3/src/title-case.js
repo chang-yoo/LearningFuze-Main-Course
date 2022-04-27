@@ -14,27 +14,43 @@ if doesn't match, then follow the
 */
 
 function titleCase(title) {
-  var minorWords = ['and', 'or', 'nor,', 'but', 'a', 'an', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to'];
+  var minorWords = ['and', 'or', 'nor,', 'but', 'a', 'an', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to', 'for'];
   var JavaScript = 'JavaScript';
   var API = 'API';
-  var toArr = title.split(' ');
   var arr = [];
+  var toArr = title.split(' ');
   for (var i = 0; i < toArr.length; i++) {
-    for (var q = toArr[i]; q < toArr[i].length; q++) {
-      if (toArr[i][q].toUpperCase === JavaScript.toUpperCase()) {
-        arr.push(JavaScript);
-      } else if (toArr[i][q].toUpperCase() === API) {
-        arr.push(API);
-      } else if (toArr[i][q].toLowerCase === minorWords) {
-        arr.push(toArr[i][q].toLowerCase());
-      } else {
-        var firstLetter = toArr[i][0].toUpperCase();
-        var restLetter = toArr[i][q].slice(1);
-        var lowerCase = restLetter.toLowerCase();
-        var oneWord = firstLetter + lowerCase;
-        arr.push(oneWord);
-      }
+    if (toArr[i].toLowerCase() === API.toLowerCase()) {
+      toArr[i] = API;
+      arr.push(toArr[i]);
+    } else if (toArr[i].toLowerCase() === JavaScript.toLowerCase()) {
+      toArr[i] = JavaScript;
+      arr.push(toArr[i]);
+    } else {
+      var lowerCase = toArr[i].toLowerCase();
+      for (var q = 0; q < minorWords.length; q++) {
+        if (lowerCase === minorWords[q]) {
+          toArr[i] = minorWords[q];
+          arr.push(toArr[i]);
+        } else if (lowerCase !== minorWords[q] && lowerCase !== undefined) {
+          var firstLetter = toArr[i].slice(0, 1).toUpperCase();
+          var restLetters = toArr[i].slice(1).toLowerCase();
+          var oneWord = firstLetter + restLetters;
+        }
+      } arr.push(oneWord);
     }
-  } var result = arr.join(' ');
-  return result;
+  } var toString = arr.join(' ');
+  return toString;
 }
+
+//       for (var w = 0; w < toArr[i].length; w++) {
+//         if (toArr[i][w] === dash) {
+//           var afterDashLetterLow = toArr[i][w + 1];
+
+//           var afterDashLetter = toArr[i][w + 1].toUpperCase();
+//           afterDashLetter.replace(afterDashLetterLow);
+//         }
+//       }
+//     }
+//   } var backToString = arr.join(' ');
+// }

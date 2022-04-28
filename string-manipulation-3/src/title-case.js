@@ -1,4 +1,5 @@
 /* exported titleCase */
+
 /*
 create a function definition with one parementer that returns every first letter capitzliaed of words with conditions of :
   Capitalize the first word of the title and of any subtitle.

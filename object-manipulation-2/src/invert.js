@@ -12,7 +12,6 @@ function invert(source) {
   var object = {};
   for (var prop in source) {
     object[source[prop]] = prop;
-    prop = object[source[prop]];
   }
   return object;
 }

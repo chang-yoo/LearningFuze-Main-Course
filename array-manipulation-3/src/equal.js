@@ -2,19 +2,17 @@
 
 /*
 function defnition that returns boolean output if values from two argument are equal -> true; if not -> false
-assign two empty arrays to two variables
-create for loop for each values and push to each array if they have same values for each index
-compare two variables and return true if they are equal
+compare if they have same length first. If not -> false
+create a for loop to compare if they have same value at same index. If not -> false
+if the values don't fit into above two comparasions, return true;
 */
 function equal(first, second) {
-  var arr1 = [];
-  var arr2 = [];
-  if (first.length === second.length) {
-    for (var i = 0; i < first.length; i++) {
-      if (first[i] === second[i]) {
-        arr1.push(first[i]);
-        arr2.push(second[i]);
-      }
-    }
+  if (first.length !== second.length) {
+    return false;
   }
+  for (var i = 0; i < first.length; i++) {
+    if (first[i] !== second[i]) {
+      return false;
+    }
+  } return true;
 }

@@ -1,4 +1,5 @@
 /* exported isAnagram */
+
 /*
 create a function definition that compares each letter of firstString to secondString
 convert each argument to array and use sort() method to set up the letters in alphabetical order and convert back to string

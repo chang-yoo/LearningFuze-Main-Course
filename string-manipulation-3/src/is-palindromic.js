@@ -1,4 +1,5 @@
 /* exported isPalindromic */
+
 /*
 create a function definition with one parameter that checks if an argument is palindrome
 take out space from the object and assign it to value

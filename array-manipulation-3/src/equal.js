@@ -14,5 +14,6 @@ function equal(first, second) {
     if (first[i] !== second[i]) {
       return false;
     }
-  } return true;
+  }
+  return true;
 }

@@ -42,4 +42,26 @@ var cardPlayers = [
     hand: null
   }
 ];
-console.log(cardPlayers);
+
+var card = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var suit = ['club', 'diamonds', 'hearts', 'spades'];
+
+function shuffledDeck() {
+  for (var i = 0; i < cardPlayers.length; i++) {
+    cardPlayers[i].hand = [];
+  }
+  var deck = [];
+  for (var q = 0; q < card.length; q++) {
+    for (var j = 0; j < suit.length; j++) {
+      var obj = {
+        rank: card[q],
+        face: suit[j]
+      };
+      deck.push(obj);
+    }
+  }
+  var shuffled = _.shuffle(deck);
+  console.log(shuffled);
+  return shuffled;
+}
+shuffledDeck();

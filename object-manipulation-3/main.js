@@ -13,7 +13,8 @@ create a function that returns a shuffled deck
 create a function that returns two cards at players hand
   assign previous function to a variable
   loop to push the shuffled cards to players hand
-    if condition to check no two players should be able tro receive the same card and loop should be stopped once hand's length reaches 2
+    use one dech to push from previous function in order to players hand so each player cannot get same cards
+    if condition loop should be stopped once hand's length reaches 2
     return players hand
 create a function that assigns the value of suit to number
   loop players hands and if they have facecards set 10 for facecards and 11 for ace
@@ -64,4 +65,20 @@ function shuffledDeck() {
   console.log(shuffled);
   return shuffled;
 }
-shuffledDeck();
+
+function dealCards() {
+  var afterShuffled = shuffledDeck();
+  var index = 0;
+  for (var i = 0; i < cardPlayers.length; i++) {
+    for (var j = 0; j < afterShuffled.length; j++) {
+      index++;
+      cardPlayers[i].hand.push(afterShuffled[index]);
+      if (cardPlayers[i].hand.length === 2) {
+        break;
+      }
+    }
+  }
+  return cardPlayers;
+}
+dealCards();
+console.log(cardPlayers);

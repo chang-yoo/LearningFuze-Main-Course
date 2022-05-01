@@ -17,11 +17,10 @@ create a function that returns two cards at players hand
     if condition loop should be stopped once hand's length reaches 2
     return players hand
 create a function that assigns the value of suit to number
+  assign a 0 for winningscore to find the highest score at the end
+  assign winner as null and update with the string saying winner blah blah balh
   loop players hands and if they have facecards set 10 for facecards and 11 for ace
-  break
-create a function that finds sum of players cards
-  loop to find sum of each players cards
-  set the winner as one with highest number and give number of player
+  loop to find sum of each players cards and use if statement to find the highest score and the name
   return the winner
 */
 
@@ -44,7 +43,7 @@ var cardPlayers = [
   }
 ];
 
-var card = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var card = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'];
 var suit = ['club', 'diamonds', 'hearts', 'spades'];
 
 function shuffledDeck() {
@@ -62,7 +61,6 @@ function shuffledDeck() {
     }
   }
   var shuffled = _.shuffle(deck);
-  console.log(shuffled);
   return shuffled;
 }
 
@@ -80,5 +78,28 @@ function dealCards() {
   }
   return cardPlayers;
 }
-dealCards();
-console.log(cardPlayers);
+
+function score() {
+  var cardsOnHand = dealCards();
+  console.log(cardsOnHand);
+  var winner = null;
+  var winningScore = 0;
+  for (var i = 0; i < cardsOnHand.length; i++) {
+    for (var j = 0; j < cardsOnHand[i].hand.length; j++) {
+      if (cardsOnHand[i].hand[j].rank === 'Jack' || cardsOnHand[i].hand[j].rank === 'Queen' || cardsOnHand[i].hand[j].rank === 'King') {
+        cardsOnHand[i].hand[j].rank = 10;
+      } else if (cardsOnHand[i].hand[j].rank === 'Ace') {
+        cardsOnHand[i].hand[j].rank = 11;
+      }
+    }
+    var score = cardsOnHand[i].hand[0].rank + cardsOnHand[i].hand[1].rank;
+    if (score > winningScore) {
+      winningScore = score;
+      winner = cardPlayers[i].name + ' is the Winner with a score of ' + winningScore;
+      console.log(winner);
+    }
+  }
+  return winner;
+}
+
+score();

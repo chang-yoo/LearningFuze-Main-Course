@@ -1,11 +1,22 @@
-const division = require('./divide');
-console.log(`the result of dividing two number is: ${division.expression(4, 2)}`);
-
-const multiplying = require('./multiply');
-console.log(`the result of muptiplying two number is: ${multiplying.expression(4, 2)}`);
-
+const add = require('./add');
 const subtract = require('./subtract');
-console.log(`the result of subtracting of two number is ${subtract.expression(5, 3)}`);
+const divide = require('./divide');
+const multiply = require('./multiply');
+const [, , x, expression, y] = process.argv;
 
-const sum = require('./add');
-console.log(`the result of sum of two number is: ${sum.expression(3, 2)}`);
+const num1 = Number(x);
+const num2 = Number(y);
+
+if (expression === 'plus') {
+  add(num1, num2);
+  console.log('result:', add(num1, num2));
+} else if (expression === 'minus') {
+  subtract(num1, num2);
+  console.log('result:', subtract(num1, num2));
+} else if (expression === 'over') {
+  divide(num1, num2);
+  console.log('result:', divide(num1, num2));
+} else if (expression === 'times') {
+  multiply(num1, num2);
+  console.log('result:', multiply(num1, num2));
+}

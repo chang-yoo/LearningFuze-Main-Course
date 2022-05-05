@@ -25,7 +25,6 @@ if (keyword === 'create') {
 if (keyword === 'delete') {
   const id = process.argv[3];
   delete notes[id];
-  json.nextId--;
   const stringjson = JSON.stringify(json, null, 2);
   fs.writeFile('data.json', stringjson, 'utf8', err => {
     if (err) {

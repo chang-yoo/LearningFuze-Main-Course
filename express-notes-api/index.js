@@ -53,7 +53,7 @@ app.delete('/api/notes/:id', (req, res) => {
   const ids = parseInt(beforeId);
   if (ids < 0 || isNaN(ids) || !Number.isInteger(ids)) {
     res.status(400).send('error: id must be a positive integer');
-  } else if (String(notes[ids]) === undefined) {
+  } else if (notes[ids] === undefined) {
     res.status(404).send('error: cannot find note with id ' + ids);
   } else {
     delete notes[ids];

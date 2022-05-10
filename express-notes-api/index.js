@@ -57,12 +57,13 @@ app.delete('/api/notes/:id', (req, res) => {
     res.status(404).send('error: cannot find note with id ' + ids);
   } else {
     delete notes[ids];
-    res.sendStatus(204);
     const stringjson = JSON.stringify(json, null, 2);
     fs.writeFile('data.json', stringjson, err => {
       if (err) {
         console.error(err);
         res.status(500).send('error: An unexpected error occurred.');
+      } else {
+        res.sendStatus(204);
       }
     });
   }
@@ -70,13 +71,25 @@ app.delete('/api/notes/:id', (req, res) => {
 
 app.put('/api/notes/:id', (req, res) => {
   const beforeId = req.params.id;
-  const id = parseInt(beforeId);
-  if (id < 0 || !Number.isInteger(id) || isNaN(id)) {
+  const ids = parseInt(beforeId);
+  if (ids < 0 || !Number.isInteger(ids) || isNaN(ids)) {
     res.status(400).send('id must be a positive integer');
   } else if (req.body.content === undefined) {
     res.status(400).send('error: content is a required feild');
-  } else if (notes[id] === undefined && req.body.content !== undefined) {
-    res.status(404).send('error: cannot find note with id ' + id);
+  } else if (notes[ids] === undefined && req.body.content !== undefined) {
+    res.status(404).send('error: cannot find note with id ' + ids);
+  } else {
+    json.notes[ids].content = req.body.content;
+    req.body.id = json.notes[ids].id;
+    const stringfyJson = JSON.stringify(json, null, 2);
+    fs.writeFile('data.json', stringfyJson, err => {
+      if (err) {
+        console.error(err);
+        res.status(500).send('error: An unexpected error occurred.');
+      } else {
+        res.status(200).send(req.body);
+      }
+    });
   }
 });
 

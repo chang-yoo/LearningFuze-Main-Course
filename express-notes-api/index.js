@@ -68,6 +68,18 @@ app.delete('/api/notes/:id', (req, res) => {
   }
 });
 
+app.put('/api/notes/:id', (req, res) => {
+  const beforeId = req.params.id;
+  const id = parseInt(beforeId);
+  if (id < 0 || !Number.isInteger(id) || isNaN(id)) {
+    res.status(400).send('id must be a positive integer');
+  } else if (req.body.content === undefined) {
+    res.status(400).send('error: content is a required feild');
+  } else if (notes[id] === undefined && req.body.content !== undefined) {
+    res.status(404).send('error: cannot find note with id ' + id);
+  }
+});
+
 app.listen(3000, () => {
   // eslint-disable-next-line no-console
   console.log('listening on the port 3000');

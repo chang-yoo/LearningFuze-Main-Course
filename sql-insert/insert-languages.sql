@@ -1,3 +1,5 @@
 insert into "languages" ("name")
-values ('Korean')
+values ('HTML'),
+       ('CSS'),
+       ('JavaScript')
 returning*

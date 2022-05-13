@@ -16,6 +16,9 @@ const $rightI = document.querySelector('.right-angle');
 const $image = document.querySelector('.images');
 // console.log($image);
 $rightI.addEventListener('click', nextImage);
+
 function nextImage(event) {
-  $image.setAttribute();
+  for (let i = 0; i < images.length; i++) {
+    $image.setAttribute('src', images[i + 1]);
+  }
 }

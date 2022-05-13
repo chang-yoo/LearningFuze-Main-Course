@@ -83,6 +83,33 @@ app.put('/api/grades/:gradeId', (req, res) => {
   }
 });
 
+app.delete('/api/grades/:gradeId', (req, res) => {
+  const id = Number(req.params.gradeId);
+  if (!Number.isInteger(id) || id <= 0) {
+    res.status(400).json({ error: 'An invalid gradeId' });
+  }
+  const sql = `
+    delete from "grades"
+    where "gradeId" = $1
+    returning*;
+  `;
+  const params = [id];
+  db
+    .query(sql, params)
+    .then(result => {
+      const grade = result.rows[0];
+      if (grade) {
+        res.status(200).json(grade);
+      } else {
+        res.status(404).json({ error: `Cannot find grade with gradeId of ${id}` });
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ error: 'An unexpected error occured and failed to pull data from database' });
+    });
+});
+
 app.listen(3000, () => {
   // eslint-disable-next-line no-console
   console.log('listening port at 3000!');

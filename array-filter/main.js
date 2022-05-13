@@ -12,23 +12,14 @@ const names = [
   'Donna'
 ];
 
-const even = numbers.filter(numbers => numbers % 2 === 0);
+const even = numbers.filter(number => number % 2 === 0);
 console.log(even);
 
-const overFive = numbers.filter(numbers => numbers > 5);
+const overFive = numbers.filter(number => number > 5);
 console.log(overFive);
 
-const startWithE = names.filter(names => names.startsWith('E'));
+const startWithE = names.filter(name => name.startsWith('E'));
 console.log(startWithE);
 
-const haveD = names.filter(names => {
-  for (let i = 0; i < names.length; i++) {
-    for (let j = 0; j < names[i].length; j++) {
-      if (names[i][j] === 'D') {
-        return names[i][j].toLowerCase();
-      }
-    }
-  }
-  return names.includes('d');
-});
+const haveD = names.filter(name => name.includes('d') || name.includes('D'));
 console.log(haveD);

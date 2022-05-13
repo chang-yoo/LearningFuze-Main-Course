@@ -18,11 +18,11 @@ app.get('/api/grades', (req, res) => {
   db
     .query(sql)
     .then(result => {
-      res.status(200).send(result.rows);
+      res.status(200).json(result.rows);
     })
     .catch(err => {
       console.error(err);
-      res.status(500).send({ error: 'An unexpected error occured.' });
+      res.status(500).json({ error: 'An unexpected error occured.' });
     });
 });
 
@@ -41,42 +41,46 @@ app.post('/api/grades', (req, res) => {
   db
     .query(sql, values)
     .then(result => {
-      res.status(201).send(result.rows[0]);
+      res.status(201).json(result.rows[0]);
     })
     .catch(err => {
       console.error(err);
-      res.status(500).send({ error: 'An unexpected error occured and failed to pull data from database' });
+      res.status(500).json({ error: 'An unexpected error occured and failed to pull data from database' });
     });
 });
 
 app.put('/api/grades/:gradeId', (req, res) => {
   const beforeId = req.params.gradeId;
-  const id = parseInt(beforeId);
+  const id = Number(beforeId);
   const body = req.body;
-  if (!Number.isInteger(id) || id <= 0 || body.name === undefined || body.course === undefined || body.score === undefined) {
-    res.status(400).send({ error: 'An invalid gradeId or missing name, course, or socre' });
+  if (!Number.isInteger(id) || id <= 0) {
+    res.status(400).json({ error: 'An invalid gradeId' });
+  } else if (body.name === undefined || body.course === undefined || body.score === undefined) {
+    res.status(400).json({ error: 'Missing name, course, or score' });
+  } else {
+    const sql = `update "grades"
+        set name = $1,
+            course = $2,
+            score = $3
+            where "gradeId" = $4
+            returning*
+            `;
+    const params = [body.name, body.course, body.score, id];
+    db
+      .query(sql, params)
+      .then(result => {
+        const grade = result.rows[0];
+        if (grade) {
+          res.status(200).json(grade);
+        } else {
+          res.status(404).json({ error: `Cannot find grade with gradeId of ${id}` });
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        res.status(500).json({ error: 'An unexpected error occured and failed to pull data from database' });
+      });
   }
-  const sql = `
-    update "grades"
-    set "name" = 'body.name',
-        "course" = 'body.course',
-        "score" = body.score
-  where "gradeId" = ${id}
-  `;
-  db
-    .query(sql)
-    .then(result => {
-      const grade = result.row[0];
-      if (grade) {
-        res.status(200).send(grade);
-      } else {
-        res.status(404).send({ error: `Cannot find grade with "gradeId of" ${id}` });
-      }
-    })
-    .catch(err => {
-      console.error(err);
-      res.status(500).send({ error: 'An unexpected error occured and failed to pull data from database' });
-    });
 });
 
 app.listen(3000, () => {

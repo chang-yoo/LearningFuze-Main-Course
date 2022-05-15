@@ -45,10 +45,19 @@ img {
   top: 48%;
 }
 
+.dot-container {
+  display: flex;
+  justify-content: center;
+}
+
 i {
   size: 3rem;
 }
 
 i:hover {
   cursor: pointer;
+}
+
+.horz-margin {
+  margin: 0.4em;
 }

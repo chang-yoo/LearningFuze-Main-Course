@@ -35,12 +35,24 @@ function carousel() {
 }
 
 const $dots = document.querySelectorAll('.horz-margin');
+
 function changeDots() {
   for (let i = 0; i < $dots.length; i++) {
     $dots[i].className = 'far fa-circle horz-margin';
     if (parseInt($dots[i].getAttribute('id')) === imageIndex) {
       $dots[i].className = 'fas fa-circle horz-margin';
     }
+  }
+}
+
+const $dotContainer = document.querySelector('.dot-container');
+$dotContainer.addEventListener('click', clickDots);
+function clickDots(event) {
+  if (event.target.tagName === 'I') {
+    const id = parseInt(event.target.getAttribute('id'));
+    imageIndex = id;
+    $image.setAttribute('src', images[imageIndex]);
+    changeDots();
   }
 }
 setInterval(carousel, 3000);

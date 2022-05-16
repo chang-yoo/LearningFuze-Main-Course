@@ -1,0 +1,63 @@
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+}
+
+.justify-center-align-center {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.border {
+  margin: auto;
+  height: 50%;
+  width: 50%;
+  border: 5px solid black;
+}
+
+.image-container {
+  width: 100%;
+  justify-content: center;
+}
+
+img {
+  height: 300px;
+  width: auto;
+  position: relative;
+}
+
+.right-angle {
+  position: absolute;
+  right: 28%;
+  top: 48%;
+}
+
+.left-angle {
+  position: absolute;
+  left: 28%;
+  top: 48%;
+}
+
+.dot-container {
+  display: flex;
+  justify-content: center;
+}
+
+i {
+  size: 3rem;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+.horz-margin {
+  margin: 0.4em;
+}

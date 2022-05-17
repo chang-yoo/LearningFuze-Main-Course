@@ -3,7 +3,7 @@
     "stylelint --fix"
   ],
   "*.html": [
-    "markuplint"
+    "markuplint --fix"
   ],
   "*.{js,jsx}": [
     "eslint --fix"

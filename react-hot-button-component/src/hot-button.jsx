@@ -8,22 +8,23 @@ export default class HotButton extends React.Component {
   }
 
   handleClick() {
-    this.setState(this.count++);
+    this.setState({ count: this.state.count + 1 });
   }
 
   render() {
-    if (this.count < 4) {
-      return <div> <button className= 'purple' onClick={this.handleClick}>Hot Button</button> {this.count} click</div>;
-    } else if (this.count < 7) {
-      return <div> <button className='orchid' onClick={this.handleClick}>Hot Button</button> {this.count} click</div>;
-    } else if (this.count < 10) {
-      return <div> <button className='red' onClick={this.handleClick}>Hot Button</button> {this.count} click</div>;
-    } else if (this.count < 13) {
-      return <div> <button className='orange' onClick={this.handleClick}>Hot Button</button> {this.count} click</div>;
-    } else if (this.count < 18) {
-      return <div> <button className='yellow' onClick={this.handleClick}>Hot Button</button> {this.count} click</div>;
-    } else if (this.count >= 18) {
-      return <div> <button className='white' onClick={this.handleClick}>Hot Button</button> {this.count} click</div>;
+    const clicked = this.state.count;
+    if (clicked < 4) {
+      return <button className= 'purple' onClick={this.handleClick}>Hot Button</button>;
+    } else if (clicked < 7) {
+      return <button className='orchid' onClick={this.handleClick}>Hot Button</button>;
+    } else if (clicked < 10) {
+      return <button className='red' onClick={this.handleClick}>Hot Button</button>;
+    } else if (clicked < 13) {
+      return <button className='orange' onClick={this.handleClick}>Hot Button</button>;
+    } else if (clicked < 18) {
+      return <button className='yellow' onClick={this.handleClick}>Hot Button</button>;
+    } else if (clicked >= 18) {
+      return <button className='white' onClick={this.handleClick}>Hot Button</button>;
     }
   }
 }

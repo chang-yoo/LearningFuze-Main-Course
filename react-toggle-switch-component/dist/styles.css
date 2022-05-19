@@ -1,0 +1,34 @@
+.on {
+  background-color: green;
+}
+
+.off {
+  background-color: grey;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+}
+
+div {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.onbox {
+  position: absolute;
+  top: 0;
+}
+
+.offbox {
+  position: absolute;
+  bottom: 0;
+}

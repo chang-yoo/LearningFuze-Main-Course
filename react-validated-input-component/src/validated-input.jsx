@@ -48,7 +48,7 @@ export default class Validated extends React.Component {
           Password <br />
           <input name="password" type="password" value={this.state.password} onChange={this.handlePassword}>
           </input> <i className="fa-solid fa-x"></i> <br />
-          <p>Your password requires number/special character(!, @, #, $, %, ^, &, *, (, or ))/capital letter</p>
+          <p>Your password requires number/special character(!, @, #, $, %, ^, &, *, (, or ))</p>
         </form>
       );
     }

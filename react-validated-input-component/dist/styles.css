@@ -1,0 +1,19 @@
+p {
+  font-size: 0.95rem;
+  color: red;
+}
+
+i {
+  position: absolute;
+  left: 18%;
+  top: 4%;
+  color: red;
+}
+
+input {
+  border: 2px solid black;
+}
+
+.fa-check {
+  color: green;
+}

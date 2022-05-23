@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+  background-color: #ddd;
+  border: 1px solid black;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  width: 400px;
+}
+
+.description {
+  background-color: white;
+  font-size: 12px;
+  padding: 0.5rem 0;
+  border-top: 1px solid black;
+}
+
+h3,
+.description {
+  padding-left: 1rem;
+}
+
+h3:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}

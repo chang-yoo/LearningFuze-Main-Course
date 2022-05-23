@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "Build": "webpack",
+    "build": "webpack",
     "watch": "webpack --watch --stats=minimal --mode=development --devtool=source-map",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

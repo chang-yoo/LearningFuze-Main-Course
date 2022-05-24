@@ -47,7 +47,8 @@ export default class App extends React.Component {
       .then(res => res.json())
       .then(data => {
         const old = this.state.todos;
-        return old.concat(data);
+        const newData = old.concat(data);
+        this.setState({ todos: newData });
       });
   }
 

@@ -13,7 +13,11 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/api/todos')
+    fetch('/api/todos', {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
       .then(res => res.json())
       .then(data => {
         this.setState({ todos: data });
@@ -70,10 +74,26 @@ export default class App extends React.Component {
      *
      * DO NOT MUTATE the original state array, nor any objects within it.
      * https://reactjs.org/docs/optimizing-performance.html#the-power-of-not-mutating-data
-     *
-     * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
-     * And specify the "Content-Type" header as "application/json"
-     */
+     * */
+    const data = this.state.todos;
+    for (let i = 0; i < data.length; i++) {
+      if (parseInt(todoId) === data[i].todoId) {
+        // const check = data[i].isCompleted;
+        // console.log(check);
+      }
+    }
+
+    fetch(`/api/todos/${todoId}`, {
+      method: 'patch',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(todoId)
+    })
+      .then(res => res.json())
+      .then(data => {
+        // console.log(data);
+      });
   }
 
   render() {

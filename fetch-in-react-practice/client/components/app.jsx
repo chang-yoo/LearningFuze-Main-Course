@@ -75,24 +75,33 @@ export default class App extends React.Component {
      * DO NOT MUTATE the original state array, nor any objects within it.
      * https://reactjs.org/docs/optimizing-performance.html#the-power-of-not-mutating-data
      * */
-    const data = this.state.todos;
-    for (let i = 0; i < data.length; i++) {
-      if (parseInt(todoId) === data[i].todoId) {
-        // const check = data[i].isCompleted;
-        // console.log(check);
+    const old = this.state.todos;
+    let index;
+    let obj;
+    for (let i = 0; i < old.length; i++) {
+      if (old[i].todoId === todoId) {
+        index = i;
+        obj = old[i];
+        if (obj.isCompleted) {
+          obj.isCompleted = false;
+        } else {
+          obj.isCompleted = true;
+        }
       }
     }
 
     fetch(`/api/todos/${todoId}`, {
-      method: 'patch',
+      method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(todoId)
+      body: JSON.stringify(obj)
     })
       .then(res => res.json())
       .then(data => {
-        // console.log(data);
+        const replace = this.state.todos;
+        replace.splice(index, 1, data);
+        this.setState({ todos: replace });
       });
   }
 

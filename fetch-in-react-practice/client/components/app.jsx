@@ -13,11 +13,6 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    /**
-     * Use fetch to send a GET request to `/api/todos`.
-     * Then 😉, once the response JSON is received and parsed,
-     * update state with the received todos.
-     */
     fetch('/api/todos')
       .then(res => res.json())
       .then(data => {
@@ -42,6 +37,18 @@ export default class App extends React.Component {
     * TIP: Use Array.prototype.concat to create a new array containing the contents
     * of the old array, plus the object returned by the server.
     */
+    fetch('/api/todos', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newTodo)
+    })
+      .then(res => res.json())
+      .then(data => {
+        const old = this.state.todos;
+        return old.concat(data);
+      });
   }
 
   toggleCompleted(todoId) {

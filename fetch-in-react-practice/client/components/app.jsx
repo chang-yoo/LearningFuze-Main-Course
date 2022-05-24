@@ -81,11 +81,10 @@ export default class App extends React.Component {
     for (let i = 0; i < old.length; i++) {
       if (old[i].todoId === todoId) {
         index = i;
-        obj = old[i];
-        if (obj.isCompleted) {
-          obj.isCompleted = false;
+        if (old[i].isCompleted) {
+          obj = { isCompleted: false };
         } else {
-          obj.isCompleted = true;
+          obj = { isCompleted: true };
         }
       }
     }
@@ -99,7 +98,8 @@ export default class App extends React.Component {
     })
       .then(res => res.json())
       .then(data => {
-        const replace = this.state.todos;
+        const copy = this.state.todos.slice();
+        const replace = copy;
         replace.splice(index, 1, data);
         this.setState({ todos: replace });
       });

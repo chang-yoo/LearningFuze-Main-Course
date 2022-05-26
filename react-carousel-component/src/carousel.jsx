@@ -45,18 +45,18 @@ export default class Carousel extends React.Component {
 
   render() {
     return <div className="container">
-              <i onClick={this.previousImage} className="left-angle fa-solid fa-angle-left fa-2x"></i>
-              <div className="imagecontainer">
-                <img src={this.state.image}></img>
-              </div>
-              <i onClick={this.nextImage}className="right-angle fa-solid fa-angle-right fa-2x"></i>
-              <div className="dot-container">
-                <i id="0" className="fas fa-circle horz-margin"></i>
-                <i id="1" className="far fa-circle horz-margin"></i>
-                <i id="2" className="far fa-circle horz-margin"></i>
-                <i id="3" className="far fa-circle horz-margin"></i>
-                <i id="4" className="far fa-circle horz-margin"></i>
-              </div>
-            </div>;
+      <i onClick={this.previousImage} className="left-angle fa-solid fa-angle-left fa-2x"></i>
+      <div className="imagecontainer">
+        <img src={this.state.image}></img>
+      </div>
+      <i onClick={this.nextImage} className="right-angle fa-solid fa-angle-right fa-2x"></i>
+      <div className="dot-container">
+        <i id="0" className="fas fa-circle horz-margin"></i>
+        <i id="1" className="far fa-circle horz-margin"></i>
+        <i id="2" className="far fa-circle horz-margin"></i>
+        <i id="3" className="far fa-circle horz-margin"></i>
+        <i id="4" className="far fa-circle horz-margin"></i>
+      </div>
+    </div>;
   }
 }

@@ -1,0 +1,15 @@
+- the user lend on the homepage
+- the user try to sigin in (
+    - triggers handleSubmit function
+    - the server gets post request, and app.post method
+      - finds whether the path is "sign-in" or "sign-up" by fetching function (for this case "sign-in") and pass the inputted value to database
+      - selects userId and hashedPassword from "users" table where "username" equal to value of username.
+        - using argon2.verify method, they verify if the inputted password by user matches to hashedPassword in server.
+        - If not, returns 'invalid login' to user.
+        - If password is correct, it generates JSONWEBToken by jwt.sign method with two argumenta of payload and .evn.TOEKN_Secret and repsonse it back to user.
+    - Once the token is generated, handleSignIn method triggers in app.jsx module, which setstate the user property from null to user value in payload
+    - set the data in localstorage with a token
+    - Then, the data passes to Navbar class in navbar.jsx module
+      - the value of user returns not null and directs link to a logged in page (localhost:3000/#)
+    - renderPage method in app.jsx returns home react element (GIF page) when it's empty string after hash in url.
+User is now signed in!

@@ -1,0 +1,5 @@
+Once signed in
+  - The handleSignIn saves the token in localstorage
+    - when refreshing the app, the server pulls token from localstorage and verify if the value is constant by jwtDecode() function
+    - if value is constant, user can stay signed in after refreshing and gives back boolean false to isAuthorizing property
+    - render method check if isAuthorizing is true -> return null, otherwise return to page

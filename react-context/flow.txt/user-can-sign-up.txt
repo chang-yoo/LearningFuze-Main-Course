@@ -1,0 +1,7 @@
+- User lands on main page
+  - when users try to sign up, it triggers handleSubmit method when clicking regitser button.
+    - then the inputted value gets inserted into database by app.post method with a path to '/sign-up' with fetching function.
+      - for security reason, argon2.hash method converts the user's password to hashedpassword before inserting to database.
+      - once the server successfully register to database, it sends a repsond to client with userId, username, and createdat information.
+      - when fetchiing function triggers, the value of window.location.hash changes to 'sign-in' -> change the form to sign-in mode
+  - since the user's account data is now stored in database, they now have an access log in.

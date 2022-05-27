@@ -1,0 +1,9 @@
+When the user signs out
+  - the handleSignOut method triggers
+    - removes token from localstorage
+    - set a value of this.state.user to null.
+  - Navbar class indicates that the value of user has changed
+    - links back to sign-in/sign-up page.
+  - Because the value of user became null, the user has no longer access to logged in page unless they sign-in and get the value of user and token again.
+  - Also, since the token is removed from the localshotrage, refreshing the page would also do nothing about getting data back.
+  - user's data is saved in database, so they can sign in to get back to GIF page.

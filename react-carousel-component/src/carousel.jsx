@@ -1,6 +1,12 @@
 import React from 'react';
 
-const images = ['../images/001.png', '../images/004.png', '../images/007.png', '../images/025.png', '../images/039.png'];
+const images = [
+  { id: 0, image: '../images/001.png' },
+  { id: 1, image: '../images/004.png' },
+  { id: 2, image: '../images/007.png' },
+  { id: 3, image: '../images/025.png' },
+  { id: 4, image: '../images/039.png' }
+];
 export default class Carousel extends React.Component {
   constructor(props) {
     super(props);
@@ -10,57 +16,41 @@ export default class Carousel extends React.Component {
     };
     this.previousImage = this.previousImage.bind(this);
     this.nextImage = this.nextImage.bind(this);
-    this.dotColor = this.dotColor.bind(this);
     this.imageSwap = this.imageSwap.bind(this);
   }
 
   previousImage() {
-    // clearInterval(this.timerId)
+    clearInterval(this.timerId);
     const { current } = this.state;
     if (current > 0) {
-      this.setState({ current: current - 1, image: images[current] });
+      this.setState({ current: current - 1 });
     } if (current === 0) {
-      this.setState({ current: images.length - 1, image: images[current] });
+      this.setState({ current: images.length - 1 });
     }
-    this.dotColor();
-    // this.timerId = setInterval(() => this.nextImage(), 3000);
+    this.timerId = setInterval(() => this.nextImage(), 3000);
   }
 
   nextImage() {
-    // clearInterval(this.timerId)
+    clearInterval(this.timerId);
     const { current } = this.state;
     if (current >= 0) {
-      this.setState({ current: current + 1, image: images[current] });
+      this.setState({ current: current + 1 });
     }
     if (this.state.current === images.length - 1) {
-      this.setState({ current: 0, image: images[images.length - 1] });
+      this.setState({ current: 0 });
     }
-    this.dotColor();
-    // this.timerId = setInterval(() => this.nextImage(), 3000);
+    this.timerId = setInterval(() => this.nextImage(), 3000);
   }
 
-  // componentDidMount() {
-  //   this.timerId = setInterval(() => this.nextImage(), 3000);
-  // }
+  componentDidMount() {
+    this.timerId = setInterval(() => this.nextImage(), 3000);
+  }
 
   imageSwap(event) {
-    // clearInterval(this.timerId)
-    const dotId = event.target.id;
-    this.setState({ current: dotId, image: images[dotId] });
-    // this.timerId = setInterval(() => this.nextImage(), 3000);
-  }
-
-  dotColor() {
-    const dots = document.querySelectorAll('.fa-circle');
-    for (let i = 0; i < dots.length; i++) {
-      if (Number(dots[i].id) === this.state.current) {
-        dots[i].className = 'fas fa-circle horz-margin';
-      } else if (dots[i].id > 4) {
-        dots[0].className = 'fas fa-circle horz-margin';
-      } else {
-        dots[i].className = 'far fa-circle horz-margin';
-      }
-    }
+    clearInterval(this.timerId);
+    const dotId = Number(event.target.id);
+    this.setState({ current: dotId });
+    this.timerId = setInterval(() => this.nextImage(), 3000);
   }
 
   render() {
@@ -68,14 +58,23 @@ export default class Carousel extends React.Component {
       <i onClick={this.previousImage} className="left-angle fa-solid fa-angle-left fa-2x"></i>
        <i onClick={this.nextImage} className="right-angle fa-solid fa-angle-right fa-2x"></i>
       <div className="imagecontainer">
-        <img src={this.state.image}></img>
+        {images.map(image => {
+          if (this.state.current === image.id) {
+            return <img key={image.id} src={image.image}></img>;
+          } else {
+            return null;
+          }
+        })
+      }
       </div>
       <div className="dot-container">
-         <i id="0" onClick={this.imageSwap} className="fas fa-circle horz-margin"></i>
-         <i id="1" onClick={this.imageSwap} className="far fa-circle horz-margin"></i>
-         <i id="2" onClick={this.imageSwap} className="far fa-circle horz-margin"></i>
-         <i id="3" onClick={this.imageSwap} className="far fa-circle horz-margin"></i>
-         <i id="4" onClick={this.imageSwap} className="far fa-circle horz-margin"></i>
+        {images.map(dot => {
+          if (this.state.current === dot.id) {
+            return <i key={dot.id} id={dot.id} onClick={this.imageSwap} className='fas fa-circle horz-margin'></i>;
+          } else {
+            return <i key={dot.id} id={dot.id} onClick={this.imageSwap} className='far fa-circle horz-margin'></i>;
+          }
+        })}
       </div>
     </div>;
   }
